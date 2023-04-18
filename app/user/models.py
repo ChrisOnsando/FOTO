@@ -9,6 +9,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from app.abstract import TimeStampedModel
+from cloudinary.models import CloudinaryField
 
 
 class UserManager(BaseUserManager):
@@ -92,4 +93,10 @@ class User(AbstractBaseUser, PermissionsMixin, TimeStampedModel):
     REQUIRED_FIELDS = ["username", "password"]
     USERNAME_FIELD = "email"
 
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    image = CloudinaryField("image")
+    bio = models.CharField(blank=True, max_length=500, null=True)
 
+    def __str__(self) -> str:
+        return self.user.username
