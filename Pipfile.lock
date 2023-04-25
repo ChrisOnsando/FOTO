@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3e9d3aafbb50985c298fbd96d3251af67df29785950bca2f830fc2fa40d49a0f"
+            "sha256": "ad92c5aae540475b9861b0291ed0191c0f7943a702d894715463e299308880a6"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -108,13 +108,35 @@
             "index": "pypi",
             "version": "==2.9.6"
         },
+        "python-http-client": {
+            "hashes": [
+                "sha256:ad371d2bbedc6ea15c26179c6222a78bc9308d272435ddf1d5c84f068f249a36",
+                "sha256:bf841ee45262747e00dec7ee9971dfb8c7d83083f5713596488d67739170cea0"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "version": "==3.3.7"
+        },
+        "sendgrid": {
+            "hashes": [
+                "sha256:522b30fc98306496208c5d8bdd5642cd6a2fd65cad487475f57f9098ce880604",
+                "sha256:9b15050c6f8826ee576f76a786efb15d956639f485478cbddd79ed69e8350ab8"
+            ],
+            "index": "pypi",
+            "version": "==6.10.0"
+        },
         "sqlparse": {
             "hashes": [
-                "sha256:0323c0ec29cd52bceabc1b4d9d579e311f3e4961b98d174201d5622a23b85e34",
-                "sha256:69ca804846bb114d2ec380e4360a8a340db83f0ccf3afceeb1404df028f57268"
+                "sha256:5430a4fe2ac7d0f93e66f1efc6e1338a41884b7ddf2a350cedd20ccc4d9d28f3",
+                "sha256:d446183e84b8349fa3061f0fe7f06ca94ba65b426946ffebe6e3e8295332420c"
             ],
             "markers": "python_version >= '3.5'",
-            "version": "==0.4.3"
+            "version": "==0.4.4"
+        },
+        "starkbank-ecdsa": {
+            "hashes": [
+                "sha256:9399c3371b899d4a235b68a1ed7919d202fbf024bd2c863ae8ebdad343c2a63a"
+            ],
+            "version": "==2.2.0"
         },
         "typing-extensions": {
             "hashes": [
