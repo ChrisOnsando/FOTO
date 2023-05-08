@@ -169,13 +169,13 @@ SIMPLE_JWT = {
     "UPDATE_LAST_LOGIN": False,
 }
 
-# sendgrid settings
-EMAIL_HOST = "smtp.sendgrid.net"
-EMAIL_HOST_USER = "FOTO"
-EMAIL_HOST_PASSWORD = config("SENDGRID_API_KEY", "")
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_USER = config("EMAIL_USER", "")
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 cloudinary.config(
     cloud_name=config("CLOUDINARY_NAME"),

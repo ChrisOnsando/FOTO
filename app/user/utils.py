@@ -9,7 +9,7 @@ from django.urls import reverse
 from django.utils.encoding import smart_bytes
 from django.utils.http import urlsafe_base64_encode
 
-from fotography.settings import EMAIL_USER
+from fotography.settings import EMAIL_HOST_USER
 
 User = get_user_model()
 
@@ -20,7 +20,7 @@ def send_email(template: str, email_data: Any) -> None:
     send_mail(
         email_data.get("subject"),
         email_body,
-        EMAIL_USER,
+        EMAIL_HOST_USER,
         [email_data.get("recipient")],
         fail_silently=False,
     )
